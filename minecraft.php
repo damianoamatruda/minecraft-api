@@ -11,7 +11,7 @@ abstract class Minecraft
 	protected $host = 'minecraft.net',
 	$text =
 	[
-		'error_connect'		=> 'Couldn\t connect to minecraft.net',
+		'error_connect'		=> 'Couldn\'t connect to minecraft.net',
 		'error_notloggedin'	=> 'User not logged in'
 	];
 
