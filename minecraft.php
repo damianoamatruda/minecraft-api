@@ -104,7 +104,7 @@ class MineClient extends Minecraft
 			$response = $this->request('http://session.'.$this->host.'/game/joinserver.jsp', [
 				'user'		=> $this->username,
 				'sessionId'	=> $this->session_id,
-				'$serverId'	=> $server_id
+				'serverId'	=> $server_id
 			]);
 			if ($response == 'OK') return true;
 			else
