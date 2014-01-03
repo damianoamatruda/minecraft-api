@@ -2,7 +2,7 @@
 /*
  *	Minecraft API
  *	Author: DamiHack
- *	Website: http://github.com/DamiHack/MineAuth
+ *	Website: http://github.com/DamiHack/MinecraftAPI
  *
  */
 
@@ -49,7 +49,7 @@ class MineClient extends Minecraft
 		}
 	}
 
-	function login($username, $password, $version = 69)
+	function login($username, $password, $version = 14)
 	{
 		if (empty($username) || empty($password)) $this->logged_in = false;
 		else
