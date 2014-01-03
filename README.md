@@ -78,7 +78,7 @@ In this case,
      require_once('minecraft.php');
      $user = new MineClient;
      $user->login('testusername', 'testpassword');
-     if ($user->joinServer(1081)) echo 'Server with id 1081 joined!;
+     if ($user->joinServer(1081)) echo 'Server with id 1081 joined!';
 
 MineServer
 ----------
