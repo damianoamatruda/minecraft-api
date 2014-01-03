@@ -106,7 +106,7 @@ class MineClient extends Minecraft
 				'sessionId'	=> $this->session_id,
 				'$serverId'	=> $server_id
 			]);
-			if ($page == 'OK') return true;
+			if ($response == 'OK') return true;
 			else
 			{
 				die($this->text['error_connect']);
