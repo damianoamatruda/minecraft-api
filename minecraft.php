@@ -18,7 +18,7 @@ abstract class Minecraft
 	protected function request($url, $data, $method = 'get')
 	{
 		if (empty($url) || !is_array($data)) return false;
-		if ($method != 'get' && $method != 'post') $method = 'get';
+		if (($method != 'get' && $method != 'post') xor ($method == 'post' && empty($data))) $method = 'get';
 		if ($method == 'get' && !empty($data)) $url .= '?'.http_build_query($data);
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Java/1.6.0_26');
@@ -27,7 +27,7 @@ abstract class Minecraft
 		if ($method == 'post')
 		{
 			curl_setopt($ch, CURLOPT_POST, true);
-			if (!empty($data)) curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
 		}
 		$response = curl_exec($ch);
 		curl_close($ch);
@@ -43,10 +43,7 @@ class MineClient extends Minecraft
 	function __construct($host = null)
 	{
 		if (!empty($host) && filter_var($url, FILTER_VALIDATE_URL) !== FALSE) $this->host = $host;
-		foreach ($this->text as &$string)
-		{
-			$string = '<br>'.$string.'!';
-		}
+		foreach ($this->text as &$string) $string = '<br>'.$string.'!';
 	}
 
 	function login($username, $password, $version = 13)
@@ -66,7 +63,7 @@ class MineClient extends Minecraft
 				$this->login_name	= $username;
 				$this->username		= $data[2];
 				$this->session_id	= $data[3];
-				$this->uid			= $data[4];
+				$this->uid		= $data[4];
 			}
 			else
 			{
