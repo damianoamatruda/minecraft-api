@@ -25,30 +25,30 @@ Then include the class you need:
 The super class is called **Minecraft**.
 
 * **request($url, $data, $method = 'get')** sends a curl request to any page and returns the result.
-
-  **$url** is the requested url
-
-  **$data** is the data to send
-
-  **$method** is the method to send the request
+  * **$url** is the requested url
+  * **$data** is the data to send
+  * **$method** is the method to send the request
 
 MineClient
 ----------
 MineClient is the class to manage client actions
 
+If you want, you can set a custom host:
+
+     $client = new MineClient('myhost.com');
+
+In this case,
+
+* **$client** is the variable assigned to the class
+* **'myhost.com'** is the custom host to use (If you don't set it, it will be automatically minecraft's original host)
+
 ###Functions
 * **login($username, $password, $version = 14)** lets the user to log in
-
   * **$username** is the username
-
   * **$password** is the password
-
   * **$version** is the version
-
 * **keepAlive()** keeps the session
-
 * **joinServer($server_id)** lets the user to join a server
-
   * **$server_id** is the id of the server to join
 
 ###Sample usage
@@ -84,6 +84,16 @@ MineServer
 ----------
 MineServer is the class to manage server actions
 
+To use it, you must declare the server's id and, if you want, you can set a custom host:
+
+     $server = new MineServer(1081, 'myhost.com');
+
+In this case,
+
+* **$server** is the variable assigned to the class
+* **1081** is the server's id
+* **'myhost.com'** is the custom host to use (If you don't set it, it will be automatically minecraft's original host)
+
 ###Functions
 * **checkUser($username)** checks if a user is in the server
   * **$username** is the username to check
@@ -95,7 +105,7 @@ MineServer is the class to manage server actions
      $server = new MineServer(1081);
      echo 'testusername is';
      if (!$server->checkUser('testusername')) echo ' not';
-     echo 'present in the server with id 1081';
+     echo ' present in the server with id 1081';
 
 Contributing
 ------------
