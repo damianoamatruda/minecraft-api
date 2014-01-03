@@ -35,7 +35,7 @@ MineClient is the class to manage client actions
 
 If you want, you can set a custom host:
 
-     $client = new MineClient('myhost.com');
+    $client = new MineClient('myhost.com');
 
 In this case,
 
@@ -75,10 +75,10 @@ In this case,
 
 **Join a Minecraft server**:
 
-     require_once('minecraft.php');
-     $user = new MineClient;
-     $user->login('testusername', 'testpassword');
-     if ($user->joinServer(1081)) echo 'Server with id 1081 joined!';
+    require_once('minecraft.php');
+    $user = new MineClient;
+    $user->login('testusername', 'testpassword');
+    if ($user->joinServer(1081)) echo 'Server with id 1081 joined!';
 
 MineServer
 ----------
@@ -86,7 +86,7 @@ MineServer is the class to manage server actions
 
 To use it, you must declare the server's id and, if you want, you can set a custom host:
 
-     $server = new MineServer(1081, 'myhost.com');
+    $server = new MineServer(1081, 'myhost.com');
 
 In this case,
 
@@ -101,11 +101,11 @@ In this case,
 ###Sample usage
 **Check if a user is in a server**:
 
-     require_once('minecraft.php');
-     $server = new MineServer(1081);
-     echo 'testusername is';
-     if (!$server->checkUser('testusername')) echo ' not';
-     echo ' present in the server with id 1081';
+    require_once('minecraft.php');
+    $server = new MineServer(1081);
+    echo 'testusername is';
+    if (!$server->checkUser('testusername')) echo ' not';
+    echo ' present in the server with id 1081';
 
 Contributing
 ------------
