@@ -49,7 +49,7 @@ class MineClient extends Minecraft
 		}
 	}
 
-	function login($username, $password, $version = 14)
+	function login($username, $password, $version = 13)
 	{
 		if (empty($username) || empty($password)) $this->logged_in = false;
 		else
