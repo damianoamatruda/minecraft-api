@@ -5,6 +5,8 @@ Minecraft API written in PHP5
 
 ###Don't don't show this API as your own
 
+Visit the [Wiki](https://github.com/DamiHack/MinecraftAPI/wiki)
+
 Contributing
 ------------
 If you want to help developing the editor there are a few things you'll need to:
