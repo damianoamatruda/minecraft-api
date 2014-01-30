@@ -3,9 +3,9 @@ MinecraftAPI
 
 Minecraft API written in PHP5
 
-###Visit the [Wiki](https://github.com/DamiHack/MinecraftAPI/wiki)
-
 ###Don't don't show this API as your own
+***
+###Visit the official [Wiki](https://github.com/DamiHack/MinecraftAPI/wiki)
 
 Contributing
 ------------
